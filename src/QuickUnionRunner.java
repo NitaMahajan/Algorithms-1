@@ -33,6 +33,7 @@ class WeightedQuickUnion{
 	}
 	int root(int x){
 		while(ar[x] != x){
+			ar[x] = ar[ar[x]];
 			x = ar[x];
 		}
 		return x;
